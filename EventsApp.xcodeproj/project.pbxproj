@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		7F9938BD27181EC800690204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938BC27181EC800690204 /* AppDelegate.swift */; };
 		7F9938BF27181EC800690204 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938BE27181EC800690204 /* SceneDelegate.swift */; };
-		7F9938C127181EC800690204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938C027181EC800690204 /* ViewController.swift */; };
 		7F9938C427181EC800690204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9938C227181EC800690204 /* Main.storyboard */; };
 		7F9938C627181ECC00690204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9938C527181ECC00690204 /* Assets.xcassets */; };
 		7F9938C927181ECC00690204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F9938C727181ECC00690204 /* LaunchScreen.storyboard */; };
+		7F9938D127181F3400690204 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938D027181F3400690204 /* AppCoordinator.swift */; };
+		7F9938D327182D3F00690204 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938D227182D3F00690204 /* EventListCoordinator.swift */; };
+		7F9938D527182DE300690204 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938D427182DE300690204 /* EventListViewController.swift */; };
+		7F9938DA27183E2000690204 /* EventsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F9938D827183E2000690204 /* EventsApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F9938B927181EC800690204 /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9938BC27181EC800690204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F9938BE27181EC800690204 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F9938C027181EC800690204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F9938C327181EC800690204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F9938C527181ECC00690204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F9938C827181ECC00690204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F9938CA27181ECC00690204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9938D027181F3400690204 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7F9938D227182D3F00690204 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
+		7F9938D427182DE300690204 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		7F9938D927183E2000690204 /* EventsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,32 @@
 			children = (
 				7F9938BC27181EC800690204 /* AppDelegate.swift */,
 				7F9938BE27181EC800690204 /* SceneDelegate.swift */,
-				7F9938C027181EC800690204 /* ViewController.swift */,
+				7F9938D827183E2000690204 /* EventsApp.xcdatamodeld */,
+				7F9938D627183DD600690204 /* Coordinators */,
+				7F9938D727183DE600690204 /* Controllers */,
 				7F9938C227181EC800690204 /* Main.storyboard */,
 				7F9938C527181ECC00690204 /* Assets.xcassets */,
 				7F9938C727181ECC00690204 /* LaunchScreen.storyboard */,
 				7F9938CA27181ECC00690204 /* Info.plist */,
 			);
 			path = EventsApp;
+			sourceTree = "<group>";
+		};
+		7F9938D627183DD600690204 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7F9938D027181F3400690204 /* AppCoordinator.swift */,
+				7F9938D227182D3F00690204 /* EventListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7F9938D727183DE600690204 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F9938D427182DE300690204 /* EventListViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9938C127181EC800690204 /* ViewController.swift in Sources */,
+				7F9938D127181F3400690204 /* AppCoordinator.swift in Sources */,
+				7F9938D527182DE300690204 /* EventListViewController.swift in Sources */,
 				7F9938BD27181EC800690204 /* AppDelegate.swift in Sources */,
 				7F9938BF27181EC800690204 /* SceneDelegate.swift in Sources */,
+				7F9938DA27183E2000690204 /* EventsApp.xcdatamodeld in Sources */,
+				7F9938D327182D3F00690204 /* EventListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +320,9 @@
 				DEVELOPMENT_TEAM = J4BH3WR6T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventsApp/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,9 +348,9 @@
 				DEVELOPMENT_TEAM = J4BH3WR6T4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventsApp/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F9938D827183E2000690204 /* EventsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F9938D927183E2000690204 /* EventsApp.xcdatamodel */,
+			);
+			currentVersion = 7F9938D927183E2000690204 /* EventsApp.xcdatamodel */;
+			path = EventsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7F9938B127181EC800690204 /* Project object */;
 }
