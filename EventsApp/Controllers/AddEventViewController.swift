@@ -31,6 +31,7 @@ class AddEventViewController: UIViewController {
     
     private func setupViews() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(TitleSubtitleCell.self, forCellReuseIdentifier: "TitleSubtitleCell")
         navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -65,6 +66,13 @@ extension AddEventViewController: UITableViewDataSource {
             cell.subtitleTextField.delegate = self
             return cell
         }
+    }
+}
+
+extension AddEventViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        viewModel.didSelectRow(at: indexPath)
     }
 }
 
